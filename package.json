@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./dist/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-workshop-anthya/typescript-basic-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/react-workshop-anthya/typescript-basic-practice/issues"
+  },
+  "homepage": "https://github.com/react-workshop-anthya/typescript-basic-practice#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
