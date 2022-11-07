@@ -66,6 +66,16 @@ const userFromUser: User = {
   name: "John",
 };
 
+// Type Assertion
+let cid: any = 1
+// let customerId = <number>cid or
+// -> let the type as number
+let customerId = cid as number
+
+
+
+
+
 console.log("Direction1", Direction1.Left);
 console.log("Direction2", Direction2.Left);
 
