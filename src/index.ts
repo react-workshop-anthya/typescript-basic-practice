@@ -32,13 +32,42 @@ pid = "33";
 
 // Enum
 enum Direction1 {
-  Up,
+  Up = 1,
   Down,
   Left,
   Right,
 }
+enum Direction2 {
+  Up = "Up",
+  Down = "Down",
+  Left = "Left",
+  Right = "Right",
+}
 
-console.log("Direction1", Direction1.Up);
+// objects
+const user: {
+  id: number;
+  name: string;
+} = {
+  // err -> id:number != id:string
+  // id: '1',
+  id: 1,
+  name: "John",
+};
+
+// type declaration
+type User = {
+  id: number;
+  name: string;
+};
+
+const userFromUser: User = {
+  id: 1,
+  name: "John",
+};
+
+console.log("Direction1", Direction1.Left);
+console.log("Direction2", Direction2.Left);
 
 console.log("id", id);
 console.log("x", x);
