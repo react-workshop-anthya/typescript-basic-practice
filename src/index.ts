@@ -83,15 +83,25 @@ function log(message: string | number): void {
 }
 
 // Interfaces
-interface UserInterface  {
+// key? : value -> optional object
+interface UserInterface {
   id: number;
   name: string;
-};
+  age?: number;
+}
 
-const userFromUserInterface: UserInterface = {
+const user1: UserInterface = {
   id: 1,
   name: "John",
 };
+
+// union could be used in type
+type Point = number | string;
+const p1: Point = 1;
+
+// union could not be used in interface
+// interface PointIn = number | string;
+// const p1In = Point = 1;
 
 console.log("addNum", addNum(1, 2));
 
