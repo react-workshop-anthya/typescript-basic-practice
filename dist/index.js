@@ -57,11 +57,22 @@ let cid = 1;
 // -> let the type as number
 let customerId = cid;
 // Functions
+// funcName(argument1 : argument type, argument2 : argument type): return type { scope }
 function addNum(x, y) {
     return x + y;
 }
-console.log(addNum(1, 2));
-console.log("Direction1", Direction1.Left);
-console.log("Direction2", Direction2.Left);
-console.log("id", id);
-console.log("x", x);
+// Void
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: "John",
+};
+// mutable value
+user1.id = 5;
+const p1 = 1;
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// Classes
+console.log(add(1, 2), sub(2, 1));

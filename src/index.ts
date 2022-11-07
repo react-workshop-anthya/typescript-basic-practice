@@ -73,6 +73,8 @@ let cid: any = 1;
 let customerId = cid as number;
 
 // Functions
+// funcName(argument1 : argument type, argument2 : argument type): return type { scope }
+
 function addNum(x: number, y: number): number {
   return x + y;
 }
@@ -83,10 +85,11 @@ function log(message: string | number): void {
 }
 
 // Interfaces
-// key? : value -> optional object
+// key? : value -> optional property
+// readonly key: value -> set the property readonly
 interface UserInterface {
   id: number;
-  name: string;
+  readonly name: string;
   age?: number;
 }
 
@@ -94,6 +97,10 @@ const user1: UserInterface = {
   id: 1,
   name: "John",
 };
+
+// mutable value
+user1.id = 5;
+// user1.name = 'Mary' // cannot assign to name because it is a read-only property
 
 // union could be used in type
 type Point = number | string;
@@ -103,10 +110,15 @@ const p1: Point = 1;
 // interface PointIn = number | string;
 // const p1In = Point = 1;
 
-console.log("addNum", addNum(1, 2));
+// interface function
+interface MathFunc {
+  (x: number, y: number): number;
+}
 
-console.log("Direction1", Direction1.Left);
-console.log("Direction2", Direction2.Left);
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
 
-console.log("id", id);
-console.log("x", x);
+// Classes
+
+console.log(add(1, 2), sub(2, 1));
+
