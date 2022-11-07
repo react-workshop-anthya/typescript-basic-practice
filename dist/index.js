@@ -40,6 +40,27 @@ var Direction2;
     Direction2["Left"] = "Left";
     Direction2["Right"] = "Right";
 })(Direction2 || (Direction2 = {}));
+// objects
+const user = {
+    // err -> id:number != id:string
+    // id: '1',
+    id: 1,
+    name: "John",
+};
+const userFromUser = {
+    id: 1,
+    name: "John",
+};
+// Type Assertion
+let cid = 1;
+// let customerId = <number>cid or
+// -> let the type as number
+let customerId = cid;
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 2));
 console.log("Direction1", Direction1.Left);
 console.log("Direction2", Direction2.Left);
 console.log("id", id);

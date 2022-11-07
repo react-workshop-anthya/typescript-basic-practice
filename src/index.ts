@@ -67,14 +67,33 @@ const userFromUser: User = {
 };
 
 // Type Assertion
-let cid: any = 1
+let cid: any = 1;
 // let customerId = <number>cid or
 // -> let the type as number
-let customerId = cid as number
+let customerId = cid as number;
 
+// Functions
+function addNum(x: number, y: number): number {
+  return x + y;
+}
 
+// Void
+function log(message: string | number): void {
+  console.log(message);
+}
 
+// Interfaces
+interface UserInterface  {
+  id: number;
+  name: string;
+};
 
+const userFromUserInterface: UserInterface = {
+  id: 1,
+  name: "John",
+};
+
+console.log("addNum", addNum(1, 2));
 
 console.log("Direction1", Direction1.Left);
 console.log("Direction2", Direction2.Left);
